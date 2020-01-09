@@ -1,0 +1,49 @@
+\login\
+
+password is "root"
+title is "-----=====BypassOS=====-----"
+
+{
+/cls
+/log with title
+ipw as get
+bypass: ipw = password
+goto: login
+}
+/cls
+
+\home\
+/log with title
+
+
+\cmd\
+/lognb with "BypassOS $>"
+i as get
+; ---------------------------
+goto: cls i = "cls"
+goto: hw i = "hw"
+
+
+
+
+goto: cmd
+; ---------------------------
+goto: exit
+; ---------------------------
+
+;\PUT COMMAND NAME HERE\
+; Put Code in Here. Jumps back to command-line after executing.
+;goto: cmd
+
+\cls\
+/cls
+/log with title
+goto: cmd
+
+\hw\
+/log with "Hello, World!"
+goto: cmd
+
+\exit\
+/log with "Goodbye."
+/get 

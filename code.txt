@@ -1,0 +1,31 @@
+; c = 0
+c is 0
+
+; print("Maximum: ",end="")
+/lognb with "Maximum: "
+
+; max = input()
+max as get
+
+; max += 1 / max = int(max) + 1
+max as math.add with max 1
+
+; GOTO POINT [loop]
+\loop\
+
+; c += 1
+c as math.add with c 1
+
+; float c (1.0) -> int c (1)
+c as math.killfloat with c
+
+; If c == max: goto <*>
+bypass: c = max
+
+; print(c)
+/log with c
+
+; goto "loop"
+goto: loop
+
+<*>
